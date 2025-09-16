@@ -1,0 +1,50 @@
+$title: calc(32 / 16 * 1rem);
+$label: calc(24 / 16 * 1rem);
+$text: calc(18 / 16 * 1rem);
+
+$font: "Rubik", sans-serif;
+
+$bold: 500;
+$normal: 400;
+
+$primary-color: #fafafa;
+$secundary-color: #1c1c1c;
+$tertiary-color: #d5d5d5;
+$result-color: #12b50d;
+
+$padding: calc(20 / 16 * 1rem) calc(10 / 16 * 1rem);
+
+%title{
+    font-family: $font;
+    font-size: $label;
+    font-weight: $normal;
+}
+
+%label{
+    font-family: $font;
+    font-size: $text;
+    font-weight: $normal;
+}
+
+%text{
+    font-family: $font;
+    font-size: $text;
+    font-weight: $normal;
+}
+
+%flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%button{
+    padding: calc(20 / 16 * 1rem) calc(10 / 16 * 1rem);
+    background-color: $result-color;
+    color: $primary-color;
+}
+
+%input{
+    background-color: $tertiary-color;
+}
+

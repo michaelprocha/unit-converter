@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Conversor de unidades</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<main class="app">
+			<form class="form">
+				<h1 class="form__title">Conversor de Unidades</h1>
+				<label class="form__label" for="quantity"> Digite a quantidade: </label>
+				<input class="form__input" id="quantity" type="number" />
+				<label class="form__label" for="measure"> De: </label>
+				<select class="form__input" name="measure" id="measure">
+					<option value="meters">Metros</option>
+					<option value="kilometers">Quilometros</option>
+					<option value="centimeters">Centímetros</option>
+					<option value="millimeters">Milímetros</option>
+				</select>
+				<label class="form__label" for="conversion"> Para: </label>
+				<select class="form__input" name="conversion" id="conversion">
+					<option value="meters">Metros</option>
+					<option value="kilometers">Quilometros</option>
+					<option value="centimeters">Centímetros</option>
+					<option value="millimeters">Milímetros</option>
+				</select>
+				<button class="form__button">Converter</button>
+			</form>
+			<div class="response">
+				<h2 class="response__desc">Resultado:</h2>
+				<p class="response__result" id="result"></p>
+				<p class="response__details" id="details"></p>
+			</div>
+		</main>
+	</body>
+</html>
