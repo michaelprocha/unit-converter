@@ -80,10 +80,12 @@
     }
 
     &__result{
+        padding: 0.5rem 1rem;
         width: 100%;
         height: calc(43 / 16 * 1rem);
         @extend %input;
         margin-bottom: 0.1rem;
+        @extend %text;
     }
     
     &__details{
