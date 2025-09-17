@@ -1,50 +1,94 @@
-$title: calc(32 / 16 * 1rem);
-$label: calc(24 / 16 * 1rem);
-$text: calc(18 / 16 * 1rem);
+@use "_base";
 
-$font: "Rubik", sans-serif;
-
-$bold: 500;
-$normal: 400;
-
-$primary-color: #fafafa;
-$secundary-color: #1c1c1c;
-$tertiary-color: #d5d5d5;
-$result-color: #12b50d;
-
-$padding: calc(20 / 16 * 1rem) calc(10 / 16 * 1rem);
-
-%title{
-    font-family: $font;
-    font-size: $label;
-    font-weight: $normal;
+%title {
+    font-family: base.$font;
+    font-size: base.$label;
+    font-weight: base.$xbold;
 }
 
-%label{
-    font-family: $font;
-    font-size: $text;
-    font-weight: $normal;
+%label {
+    font-family: base.$font;
+    font-size: base.$text;
+    font-weight: base.$bold;
 }
 
-%text{
-    font-family: $font;
-    font-size: $text;
-    font-weight: $normal;
+%text {
+    font-family: base.$font;
+    font-size: base.$text;
+    font-weight: base.$normal;
 }
 
-%flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+%button {
+    padding: calc(10 / 16 * 1rem) calc(16 / 16 * 1rem);
+    background-color: base.$result-color;
+    color: base.$primary-color;
+    border-radius: 0.4rem;
 }
 
-%button{
-    padding: calc(20 / 16 * 1rem) calc(10 / 16 * 1rem);
-    background-color: $result-color;
-    color: $primary-color;
+%input {
+    background-color: base.$tertiary-color;
 }
 
-%input{
-    background-color: $tertiary-color;
+.app {
+    width: 100%;
+    max-width: 26rem;
+    background-color: #fafafa;
+    border-radius: 1rem;
+    @include base.flex-center(column, 1rem);
 }
 
+.form {
+    width: 90%;
+    @include base.flex-center(column);
+
+    &__title {
+        padding: 1rem 0;
+        @extend %title;
+    }
+
+    &__label {
+        width: 100%;
+        @extend %label;
+        text-align: left;
+    }
+
+    &__input {
+        @extend %input;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        width: 100%;
+        @extend %text;
+    }
+
+    &__button {
+        align-self: flex-start;
+        @extend %button;
+        text-transform: uppercase;
+        letter-spacing: 0.04rem;
+        font-weight: base.$bold;
+    }
+}
+
+.response {
+    width: 90%;
+    @include base.flex-center(column);
+
+    &__desc{
+        @extend %label;
+        align-self: flex-start;
+    }
+
+    &__result{
+        width: 100%;
+        height: calc(43 / 16 * 1rem);
+        @extend %input;
+        margin-bottom: 0.1rem;
+    }
+    
+    &__details{
+        @extend %text;
+        color: base.$result-color;
+        padding-bottom: 1rem;
+    }
+}

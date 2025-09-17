@@ -4,8 +4,15 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0rem;
   font-family: system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -13,7 +20,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -22,21 +30,118 @@ a {
   color: inherit;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
   border: none;
   outline: none;
   background: none;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 body {
-  background-color: #fff;
+  background-color: #c1c1c1;
   color: #000;
+}
+
+.form__title {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.response__desc, .form__label {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.response__details, .form__input {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.form__button {
+  padding: 0.625rem 1rem;
+  background-color: #12b50d;
+  color: #fafafa;
+  border-radius: 0.4rem;
+}
+
+.response__result, .form__input {
+  background-color: #edebeb;
+}
+
+.app {
+  width: 100%;
+  max-width: 26rem;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0rem;
+}
+.form__title {
+  padding: 1rem 0;
+}
+.form__label {
+  width: 100%;
+  text-align: left;
+}
+.form__input {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+.form__button {
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-weight: 600;
+}
+
+.response {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0rem;
+}
+.response__desc {
+  align-self: flex-start;
+}
+.response__result {
+  width: 100%;
+  height: 2.6875rem;
+  margin-bottom: 0.1rem;
+}
+.response__details {
+  color: #12b50d;
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

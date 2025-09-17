@@ -1,40 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+$title: calc(32 / 16 * 1rem);
+$label: calc(24 / 16 * 1rem);
+$text: calc(18 / 16 * 1rem);
 
-html, body {
-  height: 100%;
-  font-family: system-ui, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+$font: "Rubik", sans-serif;
 
-ul, ol {
-  list-style: none;
-}
+$xbold: 700;
+$bold: 600;
+$normal: 400;
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+$primary-color: #fafafa;
+$secundary-color: #1c1c1c;
+$tertiary-color: #edebeb;
+$result-color: #12b50d;
 
-button, input, select, textarea {
-  font: inherit;
-  border: none;
-  outline: none;
-  background: none;
-}
+$padding: calc(20 / 16 * 1rem) calc(10 / 16 * 1rem);
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-body {
-  background-color: #fff;
-  color: #000;
+@mixin flex-center($dir: row, $gap: 0rem){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+    gap: $gap;
 }
